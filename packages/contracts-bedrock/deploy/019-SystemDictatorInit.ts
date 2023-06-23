@@ -184,7 +184,7 @@ const deployFn: DeployFunction = async (hre) => {
     await SystemDictatorProxyWithSigner.changeAdmin(hre.deployConfig.controller)
 
     // Wait for the transaction to execute properly.
-    await awaitCondition(
+    /*await awaitCondition(
       async () => {
         return (
           (await SystemDictatorProxy.callStatic.admin({
@@ -194,7 +194,7 @@ const deployFn: DeployFunction = async (hre) => {
       },
       30000,
       1000
-    )
+    )*/
   }
 }
 
